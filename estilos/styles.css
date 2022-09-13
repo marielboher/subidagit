@@ -1,0 +1,520 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body{
+    background-image: url("/multimedia/fondo2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+main{
+    min-height: 79vh;
+}
+
+/* header */
+
+.header { 
+    grid-area: header;
+    padding: 0px 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    background-color: #beb9bf;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    margin: 10px; 
+    border-radius: 10px;
+}
+
+.header nav ul{
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header li a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+
+}
+.header li a:hover{
+    color: #6c6368;
+    transform: scale(1.2);
+}
+
+/* pagina inicio */
+
+.container-i {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: min-content min-content min-content; 
+    gap: 5px;
+    grid-template-areas: 
+      "header header"
+      "main main"
+      "footer footer"; 
+  }
+.main-i{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas: 
+    "texto imagen"
+    "botones imagen";
+}
+.texto-i { 
+    grid-area: texto;
+    margin: auto;
+    color: #6c6368;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+}
+.titulo-i{
+    padding: 10px;
+    color: #6c6368;
+    font-size: 30px;
+}
+
+.subtitulo-i{
+    padding: 10px;
+    color: #a19599;
+    font-size: 40px;
+}
+.parrafo-i{
+    padding: 10px;
+    color: #6c6368;
+    font-size: 30px;
+}
+  .botones-i {
+    grid-area: botones;
+    display: flex;
+    justify-content: center;     
+ }
+ 
+ .botones-i button{
+    width: 130px;
+    height: 42px;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    margin: 0px 10px;
+    align-self: center;
+}
+.down-cv button{
+    background-color: white;
+    color: #6c6368;
+    border: 2px solid #6c6368;
+}
+.sobre-mi button{
+    background-color: #beb9bf;
+    color: white;
+    border: 2px solid #6c6368;
+}
+button:hover{
+    transform: scale(1.1);
+}
+.imagen-i {
+    grid-area: imagen;
+    margin-left: 20px;
+}
+.imagen-i img{
+    width: 400px;
+    height: 500px; 
+}
+.footer { 
+    grid-area: footer; 
+    background-color: #beb9bf;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    margin-top: 5px;
+    height: 28px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    align-self: flex-end; 
+}
+
+/* sobre mi */
+.container-s {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: min-content min-content min-content; 
+    gap: 10px; 
+    grid-template-areas: 
+        "header"
+        "card1"
+        "footer"; 
+}
+
+.cont-s{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card1 { 
+    grid-area: card1;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    width: 80%; 
+    background:#dedcdf;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img-s img{
+    width: 200px;
+    height: 250px;
+    height: 250px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.texto-s{
+    color:#6c6368;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+}
+
+/* proyectos */
+
+.container-p {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: min-content min-content min-content; 
+    gap: 6px; 
+    grid-template-areas: 
+      "header"
+      "proyectos"
+      "footer"; 
+}
+
+.proyectos { 
+    grid-area: proyectos; 
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.proyectos-row{
+    display: flex;
+}
+
+.proyectos-row-box{
+    margin: 20px;
+    background: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);  
+}
+.proyectos-row-box:hover{
+    transform: scale(1.1);
+}
+.proyectos-row-box p{
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+    font-family: 'Raleway', sans-serif;
+    color:#6c6368;
+    }
+
+.proyectos-row-box img{
+    width: 250px;
+    height: 200px;
+}
+
+/* habilidades */
+.container-h{
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: min-content min-content min-content;  
+    gap: 10px; 
+    grid-template-areas: 
+      "header"
+      "habilidades"
+      "footer"; 
+}
+
+.habilidades{
+    grid-area: habilidades;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 79vh;
+}
+
+.table{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    width: 60%;
+}
+.table table{
+    background-color: #d5d0d6;
+    text-align: left;
+    width: 100%;
+    height: 300px;
+    border-collapse: collapse;
+    border: none;
+}
+.table th, td{
+    padding: 20px;
+    border: none;
+}
+.table th{
+    background-color: #a19599;
+    border-bottom: solid 5px white;
+}
+/* contacto */
+.container-c {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: min-content min-content min-content; 
+    grid-template-areas: 
+      "header header"
+      "main main"
+      "footer footer"; 
+  }
+.main-c{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas: 
+    "contacto1 contacto2";
+    min-height: 82vh;
+}
+.contacto1 { 
+    grid-area: contacto1; 
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+.form{
+    width: 360px;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Raleway', sans-serif;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+.form div{
+    padding: 8px;
+}
+.form h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding-bottom: 10px;
+    width: 180px;
+    color:#a19599;
+}
+.form input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    border: 0;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid #6c6368;
+}
+.form label{
+    font-family: 'Raleway', sans-serif;
+    color: #6c6368;
+    font-size: 15px;
+}
+.form textarea{
+  height: 70px;
+  padding: 5px;
+}
+.form button{
+    padding: 8px 12px;
+    margin: 8px 0 ;
+    font-family: 'Raleway', sans-serif;
+    color: #6c6368;
+    border: 2px solid #a19599;
+    background-color: #ffffff;
+}
+.contacto2 { 
+    grid-area: contacto2; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.img-c{
+    width: 400px;
+    height: 400px;
+}
+.iconos-flex{
+    display: flex;
+    align-items: center;
+}
+.iconos img{
+    height: 22px;
+    padding: 2px;
+    display: block;
+}
+
+.iconos img:hover{
+    transform: scale(1.1);
+}
+.texto-iconos p{
+    font-size: 14px;
+    margin: 6px;
+    color: #6c6368;   
+}
+.texto-iconos a{
+    text-decoration: none;
+}
+
+/* media queries */
+ 
+/* inicio */
+
+@media screen and (max-width:500px) {
+    .container-i {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: min-content min-content min-content; 
+        gap: 0px;
+        grid-template-areas: 
+          "header"
+          "main" 
+          "footer"; 
+     }
+     .main-i{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content min-content;
+        grid-template-areas: 
+        "texto"
+        "imagen"
+        "botones";
+  }
+    .header { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+
+    }
+    .header nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .titulo-i{
+        color: #6c6368;
+        font-size: 20px;
+    }
+
+    .subtitulo-i{
+        color: #a19599;
+        font-size: 30px;
+    }
+    .parrafo-i{
+        color: #6c6368;
+        font-size: 20px;
+    }
+
+}
+
+/* sobre mi */
+
+@media screen and (max-width:500px) {
+    .container-s {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: min-content min-content min-content; 
+        gap: 0px;
+        grid-template-areas: 
+          "header"
+          "card1"
+          "footer"; 
+  }
+    .texto-s{
+        font-size: 7px;
+}
+}
+
+/* proyectos */
+
+@media screen and (max-width:500px) {
+    .container-p {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: min-content min-content min-content; 
+        grid-template-areas: 
+          "header"
+          "proyectos"
+          "footer"; 
+    }
+    .proyectos-row{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* habilidades */
+@media screen and (max-width:500px) {
+    .container-h{
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: min-content min-content min-content;  
+        gap: 10px; 
+        grid-template-areas: 
+          "header"
+          "habilidades"
+          "footer"; 
+          display: flex;
+          flex-direction: column;
+    }
+}
+
+/* contacto */
+@media screen and (max-width:500px) {
+.container-c {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: min-content min-content min-content; 
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"; 
+    }
+    .main-c{
+        display: grid;
+        grid-area: main;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+        grid-template-areas: 
+        "contacto1" 
+        "contacto2";
+        min-height: 82vh;
+    }
+}
+
